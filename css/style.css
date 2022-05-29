@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Kenia&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+* { 
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: #373737;
+    font-family: 'Bebas Neue', cursive;
+}
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+div.titlebox {
+    background-color: rgb(231, 231, 231);
+    font-family: 'Kenia', cursive;
+    position: absolute;
+    top: 90px;
+    z-index: 999;
+    text-align: center;
+    padding: 10px 10px;
+    font-size: 25px;
+    border-radius: 22px 22px 22px 22px;
+    border: 6px solid #373737;
+}
+hr {
+    width: 350px;
+}
+
+/* --------------------SLIDER------------------- */
+.slider {
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: calc(500px * 4);
+    height: 720px;
+    animation: glisse 15s infinite ease;
+}
+
+.slide {
+    opacity: 0.7;
+}
+
+@keyframes glisse {
+    0% {
+        transform: translateX(0px);
+    }
+    17% {
+        transform: translateX(-500px);
+    }
+    34% {
+        transform: translateX(-1500px);
+    }
+    51% {        
+        transform: translateX(-2000px);
+    }
+    68% {
+        transform: translateX(-1500px);
+    }
+    81% {
+        transform: translateX(-500px);
+    }
+    98% {
+        transform: translateX(0px);
+    }
+}
+/* -------------NAV MENU--------------- */
+
+.section-menu {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    transform: translateY(-125px);  
+}
+.menu {
+    width: calc(500px*4);
+}
+.menu ul li {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+.menu ul li:hover {
+    transform: scale(1.15);
+    
+}
+.menu ul {
+    display: flex ;
+}
+.menu ul li a {
+    color: white;
+    font-size: 50px;
+    text-decoration: none;
+}
+
+.pizza {
+    background: url(../images/pizza-banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.salade {
+    background: url(../images/salad-banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.burger {
+    background: url(../images/burger-banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.boisson {
+    background: url(../images/boisson-banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.nav-item {
+    height: 200px;
+    flex: 1;
+
+}
+
+/* ------------SECTION --------------- */
+
+.item {
+    background-color: whitesmoke;
+    margin: 20px;
+    display: flex;
+    cursor: pointer;
+    transition: 0.3s all;
+    width: 60%;   
+}
+
+.item:hover {
+    transform: scale(1.08);  
+}
+.item-info {
+    padding: 20px;
+    line-height: 40px;
+    font-size: 20px;  
+}
+section {
+    padding: 80px;
+}
+section img {
+    width: 300px;
+}
+.item-info h3 {
+    font-size: 30px;
+}
+.item-info hr {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    opacity: 0.7;
+}
+.price {
+    font-size: 30px;
+}
+/* ------------------Menu a droite----------------- */
+.sticky {
+    position: fixed;
+    width: 500px;
+    top: 30vh;
+    right: 50px;
+    transform: translateY(10px);
+    transition: 0.6s all;
+}
+
+.sticky + #main {
+    padding-top: 200px;
+}
+
+.sticky nav.menu ul {
+    flex-direction: column;
+}
+
+.sticky, nav.menu ul li {
+    margin: 0px;
+}
+
+/*  ---------------footer---------------------- */
+ 
+iframe {
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#copyeticon {
+    display: flex;
+    margin-bottom: 20px;
+    padding: 10px 10%;
+}
+#copy {
+    width: 50%;
+    text-align: left;
+    color: aliceblue;
+    font-family: 'Kenia', cursive;
+    padding-top: 20px;
+
+}
+#icon {
+    width: 50%;
+    text-align: right;
+    font-size: 30px;
+    padding-top: 10px;
+}
+#icon a {
+    display: inline-block;
+    margin: 0 15px;
+    color: aliceblue;
+}
